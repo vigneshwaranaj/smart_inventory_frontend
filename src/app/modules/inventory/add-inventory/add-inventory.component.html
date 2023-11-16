@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-6">
+
+        <form [formGroup]="form">
+            <div class="p-2 row">
+    
+                <div class="mb-3 col-12">
+                  <label class="form-label">Quantity</label>
+                  <input type="text" formControlName="quantity" class="form-control" required>
+                </div>
+          
+                <div class="mb-3 col-12">
+                  <label class="form-label">Batch Date</label>
+                  <input type="text" formControlName="batchDate" class="form-control" required>
+                </div>
+                
+                <div class="mb-3 col-12">
+                  <label class="form-label">Exipre Date</label>
+                  <input type="text" formControlName="expDate" class="form-control">
+                </div>   
+                
+                <div class="mb-3 col-12 mt-3">
+                    <button class="col-12 btn btn-primary">Generate QR Code</button>
+                </div>
+
+                
+               
+          </div>
+        </form>
+
+    </div>
+
+    <!-- <div class="col-6">
+        <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    </div> -->
+</div>

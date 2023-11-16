@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url(./assets/roboto/Roboto-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'roboto-light';
+    src: url(./assets/roboto/Roboto-Light.ttf);
+  }
+
+body{
+    font-family: 'roboto-regular';
+}
+
+.add-btn{
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: #722ff9;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+}
+
+.form-control.ng-invalid.ng-touched{
+    border-color: #dc3545;
+}
+
+thead th{
+    font-family: 'roboto-light';
+}
+
+tbody td {
+    font-size: 14px;
+    color: #666 !important;
+}

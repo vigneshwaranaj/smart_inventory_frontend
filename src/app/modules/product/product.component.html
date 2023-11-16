@@ -1,0 +1,52 @@
+<form class="row mx-0">
+    <div class="col-12">
+      <input type="text" class="form-control" placeholder="Search Product">
+    </div>
+    <!-- <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    </div> -->
+</form>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Description</th>
+			<th scope="col">Unit</th>
+			<th scope="col">Reorder Quantity</th>
+			<th scope="col">Cost Price</th>
+			<th scope="col">Selling Price</th>
+			<th scope="col">Option</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let product of productList; index as i">
+			<td scope="row">{{ i + 1 }}</td>
+			<td scope="col">{{product.name}}</td>
+			<td scope="col">{{product.description}}</td>
+			<td scope="col">{{product.unit}}</td>
+			<td scope="col">{{product.reorderQuantity}}</td>
+			<td scope="col">{{product.costPrice}}</td>
+			<td scope="col">{{product.sellingPrice}}</td>
+			<td>
+				<div class="row">
+					<div class="col">
+						<div ngbDropdown class="d-inline-block">
+							<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+								Options
+							</button>
+							<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+								<button ngbDropdownItem (click)="addStock(product.id)">Add Stock</button>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<button class="add-btn"  (click)="open()"> + </button>
