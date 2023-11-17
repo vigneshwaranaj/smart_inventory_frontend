@@ -1,3 +1,8 @@
 <div class="header">
     SMART INTVENTORY
 </div>
+<div class="sidebar">
+    <div *ngFor="let menu of menuList">
+        <a [ngClass]="{ 'active' : menu.isActive}" (click)="redirect(menu)">{{menu.name}}</a>
+    </div>
+</div>
