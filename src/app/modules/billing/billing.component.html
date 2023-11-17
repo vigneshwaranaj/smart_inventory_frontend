@@ -1,0 +1,40 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Description</th>
+			<th scope="col">Unit</th>
+			<th scope="col">Quantity</th>
+			<th scope="col">Price</th>
+            <th scope="col">Option</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of billingItemList; index as i">
+			<td scope="row">{{ i + 1 }}</td>
+			<td scope="col">{{item.name}}</td>
+			<td scope="col">{{item.description}}</td>
+			<td scope="col">{{item.unit}}</td>
+			<td scope="col">{{item.quantity}}</td>
+			<td scope="col">{{item.price}}</td>
+            <td scope="col"><button (click)="deleteItem(i)">Del</button></td>
+		</tr>
+        <tr>
+			<td scope="row"></td>
+			<td scope="col">
+                <select name="product" id="product"> 
+                    <option value="Mobile">Mobile</option>
+                    <option value="Shampoo">Shampoo</option>
+                    <option value="Dress">Dress</option>
+                    <option value="Watch">Watch</option>
+                </select>
+            </td>
+			<td scope="col"></td>
+			<td scope="col"></td>
+			<td scope="col"></td>
+			<td scope="col"></td>
+            <td scope="col"><button (click)="addItem()">Add</button></td>
+		</tr>
+	</tbody>
+</table>

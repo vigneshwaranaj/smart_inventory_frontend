@@ -9,14 +9,15 @@ import { NgbDatepickerModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstr
 import { InventoryComponent } from './inventory/inventory/inventory.component';
 import { AddInventoryComponent } from './inventory/add-inventory/add-inventory.component';
 import { QRCodeModule } from 'angularx-qrcode';
-
+import { BillingComponent } from './billing/billing.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     AddProductComponent,
     InventoryComponent,
-    AddInventoryComponent
+    AddInventoryComponent,
+    BillingComponent
   ],
   imports: [
     CommonModule,
